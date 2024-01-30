@@ -21,6 +21,16 @@ public class myclass {
         driver.findElement(By.id("password")).sendKeys("123456");
         driver.findElement(By.id("pills-tabContent")).click();
 
+        Thread.sleep(2000);
+        // navigate to back page
+        driver.navigate().back();
+        // navigate to refresh or reload page
+        driver.navigate().refresh();
+        //navigate to forward page
+        driver.navigate().forward();
+        // navigate to specific
+        driver.navigate().to("https://konnect.edu.bd/life-skill");
+
         // check website title
         String ExpectedTitle= "কিশোর বাতায়ন";
         String ActualTitle= driver.getTitle();
